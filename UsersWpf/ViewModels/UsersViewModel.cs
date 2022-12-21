@@ -59,10 +59,11 @@ namespace UsersWpf.ViewModels
 
 		private void LoadData()
 		{
-			DatiUtenti = Users.FindAll(u =>
+			DatiUtenti = Users.FindAll(FiltraNome, FiltraSesso);
+				/*(u =>
 				( string.IsNullOrEmpty(FiltraNome) || u.FirstName.Contains(FiltraNome) || u.LastName.Contains(FiltraNome) ) &&
-				( string.IsNullOrEmpty(FiltraSesso) || u.Gender == FiltraSesso )
-			); 
+				( string.IsNullOrEmpty(FiltraSesso) || u.Gender == FiltraSesso )*/
+			
 		}
 
 		public void AzzeraFiltri()
